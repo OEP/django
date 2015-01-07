@@ -110,6 +110,7 @@ test_data = (
     ('special', r'/special_chars/10%25%20complete/', [r'10% complete'], {}),
     ('special', r'/special_chars/some%20resource/', [], {'chars': r'some resource'}),
     ('special', r'/special_chars/10%25%20complete/', [], {'chars': r'10% complete'}),
+    ('special', r'/special_chars/some%0Aresource/', ['some\nresource'], {}),
     ('special', NoReverseMatch, [''], {}),
     ('mixed', '/john/0/', [], {'name': 'john'}),
     ('repeats', '/repeats/a/', [], {}),
